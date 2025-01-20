@@ -13,3 +13,18 @@ title_three = input('Введите название заголовка 3: ')
 note.extend([username, content, status, created_date, issue_date, [title_one, title_two, title_three]])
 
 print(note)
+
+note_dict = {
+    'username': username,
+    'content': content,
+    'status': status,
+    'created_date' : created_date,
+    'issue_date': issue_date,
+    'titles': [title_one, title_two, title_three],
+}
+
+for key, value in note_dict.items():
+    if isinstance(value, list):
+        print(f'{key}: {value[0]}, {value[1]}, {value[2]}')
+    else:
+        print(f'{key}:', value)
